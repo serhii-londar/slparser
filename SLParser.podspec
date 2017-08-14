@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.author       = 'Serhii Londar'
   spec.license      = { :type => 'MIT' }
   spec.homepage     = 'https://github.com/serhii-londar/slparser.git'
-  spec.version      = '0.1'
+  spec.version      = '0.0.1'
   spec.summary      = 'Json to model parser for iOS and OS X implemented with Runtime'
   spec.source       = { :git => 'https://github.com/serhii-londar/slparser.git', :tag => spec.version }
   spec.requires_arc = true
