@@ -1,0 +1,18 @@
+PODS:
+  - SLParser (0.1):
+    - SLParser/Core (= 0.1)
+  - SLParser/Core (0.1)
+
+DEPENDENCIES:
+  - SLParser (from `SLParser.podspec`)
+
+EXTERNAL SOURCES:
+  SLParser:
+    :path: SLParser.podspec
+
+SPEC CHECKSUMS:
+  SLParser: 20b8d934438cbb92a0c663a85df08f5790e8b648
+
+PODFILE CHECKSUM: 4c86d0f101a81b8bd9163bdf8436e11120918e76
+
+COCOAPODS: 1.2.1
