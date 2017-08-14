@@ -1,0 +1,11 @@
+{
+"first_name": "Bob",
+"last_name": "Lol",
+"user_id": "bob-lol",
+"age": 98.3214234,
+"avatars": {
+"avatar_750x227": "dasdasdasd",
+"small_url": "dasdasd",
+"medium_url": "dasdasdas"
+}
+}

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		924FAD051F424C33000EA309 /* testJSON in Resources */ = {isa = PBXBuildFile; fileRef = 924FAD031F424C33000EA309 /* testJSON */; };
+		924FAD051F424C33000EA309 /* testJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 924FAD031F424C33000EA309 /* testJSON.txt */; };
 		924FAD061F424C33000EA309 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 924FAD041F424C33000EA309 /* text.txt */; };
+		92844BA51F42526000E3F614 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 92844BA41F42526000E3F614 /* Person.m */; };
+		92844BA81F42526C00E3F614 /* Avatars.m in Sources */ = {isa = PBXBuildFile; fileRef = 92844BA71F42526C00E3F614 /* Avatars.m */; };
 		92DDE59D1F4242FD003FB94E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DDE59C1F4242FD003FB94E /* main.m */; };
 		92DDE5A01F4242FD003FB94E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DDE59F1F4242FD003FB94E /* AppDelegate.m */; };
 		92DDE5A31F4242FD003FB94E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92DDE5A21F4242FD003FB94E /* ViewController.m */; };
@@ -28,8 +30,12 @@
 
 /* Begin PBXFileReference section */
 		59E6828E9F21139AEB04BB26 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		924FAD031F424C33000EA309 /* testJSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testJSON; sourceTree = "<group>"; };
+		924FAD031F424C33000EA309 /* testJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testJSON.txt; sourceTree = "<group>"; };
 		924FAD041F424C33000EA309 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		92844BA31F42526000E3F614 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		92844BA41F42526000E3F614 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		92844BA61F42526C00E3F614 /* Avatars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Avatars.h; sourceTree = "<group>"; };
+		92844BA71F42526C00E3F614 /* Avatars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Avatars.m; sourceTree = "<group>"; };
 		92DDE5981F4242FD003FB94E /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DDE59C1F4242FD003FB94E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92DDE59E1F4242FD003FB94E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -89,6 +95,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		92844BA21F42525200E3F614 /* Test1 */ = {
+			isa = PBXGroup;
+			children = (
+				92844BA31F42526000E3F614 /* Person.h */,
+				92844BA41F42526000E3F614 /* Person.m */,
+				92844BA61F42526C00E3F614 /* Avatars.h */,
+				92844BA71F42526C00E3F614 /* Avatars.m */,
+			);
+			path = Test1;
+			sourceTree = "<group>";
+		};
 		92DDE58F1F4242FD003FB94E = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +127,8 @@
 		92DDE59A1F4242FD003FB94E /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				924FAD031F424C33000EA309 /* testJSON */,
+				92844BA21F42525200E3F614 /* Test1 */,
+				924FAD031F424C33000EA309 /* testJSON.txt */,
 				924FAD041F424C33000EA309 /* text.txt */,
 				92DDE5B21F42493B003FB94E /* Test */,
 				92DDE59E1F4242FD003FB94E /* AppDelegate.h */,
@@ -221,7 +239,7 @@
 			files = (
 				92DDE5AB1F4242FD003FB94E /* LaunchScreen.storyboard in Resources */,
 				92DDE5A81F4242FD003FB94E /* Assets.xcassets in Resources */,
-				924FAD051F424C33000EA309 /* testJSON in Resources */,
+				924FAD051F424C33000EA309 /* testJSON.txt in Resources */,
 				92DDE5A61F4242FD003FB94E /* Main.storyboard in Resources */,
 				924FAD061F424C33000EA309 /* text.txt in Resources */,
 			);
@@ -282,12 +300,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92844BA81F42526C00E3F614 /* Avatars.m in Sources */,
 				92DDE5C51F42493B003FB94E /* SLFinished_matches.m in Sources */,
 				92DDE5A31F4242FD003FB94E /* ViewController.m in Sources */,
 				92DDE5C31F42493B003FB94E /* SLDire_team.m in Sources */,
 				92DDE5C91F42493B003FB94E /* SLRecent_matches.m in Sources */,
 				92DDE5C41F42493B003FB94E /* SLEnhanced_matches.m in Sources */,
 				92DDE5A01F4242FD003FB94E /* AppDelegate.m in Sources */,
+				92844BA51F42526000E3F614 /* Person.m in Sources */,
 				92DDE5CA1F42493B003FB94E /* TEST.m in Sources */,
 				92DDE5C61F42493B003FB94E /* SLGames.m in Sources */,
 				92DDE59D1F4242FD003FB94E /* main.m in Sources */,

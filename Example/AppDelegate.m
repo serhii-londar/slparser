@@ -17,6 +17,9 @@
 #import "SLRadiant_team.h"
 #import "SLRecent_matches.h"
 
+#import "Person.h"
+#import "Avatars.h"
+
 @interface AppDelegate ()
 
 @end
@@ -25,25 +28,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSString *jsonString = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"text" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-    NSLog(@"testDictionary - %@", json);
+//    NSString *jsonString = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"text" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+//    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+//    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//    NSLog(@"testDictionary - %@", json);
+//    
+//    [[SLModelParser sharedParser] registerClass:[SLDire_team class]];
+//    [[SLModelParser sharedParser] registerClass:[SLEnhanced_matches class]];
+//    [[SLModelParser sharedParser] registerClass:[SLFinished_matches class]];
+//    [[SLModelParser sharedParser] registerClass:[SLGames class]];
+//    [[SLModelParser sharedParser] registerClass:[SLLeague class]];
+//    [[SLModelParser sharedParser] registerClass:[SLRadiant_team class]];
+//    [[SLModelParser sharedParser] registerClass:[SLRecent_matches class]];
+//    [[SLModelParser sharedParser] registerClass:[TEST class]];
+//    
+//    TEST *lTest = [[SLModelParser sharedParser] getModelFromDictionary:json];
+//    
+//    NSDictionary *lModelDict = [[SLModelParser sharedParser] getDictionaryFromModel:lTest];
+//    NSLog(@"%@", lModelDict);
+//    // Override point for customization after application launch.
+//    
+//    
+    NSString *jsonString1 = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testJSON" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    NSData *data1 = [jsonString1 dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *json1 = [NSJSONSerialization JSONObjectWithData:data1 options:0 error:nil];
+    NSLog(@"testJSON - %@", json1);
     
-    [[SLModelParser sharedParser] registerClass:[SLDire_team class]];
-    [[SLModelParser sharedParser] registerClass:[SLEnhanced_matches class]];
-    [[SLModelParser sharedParser] registerClass:[SLFinished_matches class]];
-    [[SLModelParser sharedParser] registerClass:[SLGames class]];
-    [[SLModelParser sharedParser] registerClass:[SLLeague class]];
-    [[SLModelParser sharedParser] registerClass:[SLRadiant_team class]];
-    [[SLModelParser sharedParser] registerClass:[SLRecent_matches class]];
-    [[SLModelParser sharedParser] registerClass:[TEST class]];
+    SLModelParser *parser = [[SLModelParser alloc] init];
+    [parser registerClass:[Person class]];
+    [parser registerClass:[Avatars class]];
     
-    TEST *lTest = [[SLModelParser sharedParser] getModelFromDictionary:json];
+    Person *person = [parser getModelFromDictionary:json1];
     
-    NSDictionary *lModelDict = [[SLModelParser sharedParser] getDictionaryFromModel:lTest];
-    NSLog(@"%@", lModelDict);
-    // Override point for customization after application launch.
+    NSDictionary *modelDictionary = [parser getDictionaryFromModel:person];
+    NSLog(@"%@", modelDictionary);
+    
     return YES;
 }
 
