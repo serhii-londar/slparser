@@ -83,7 +83,7 @@ You can add this library via cocoapods:
 pod 'SLParser'
 ```
 
-And than run:
+And then run:
 
 ```
 pod install
