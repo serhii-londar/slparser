@@ -52,7 +52,7 @@ To parse this you need to create two classes:
 @end
 ```
 
-Next step is to create parser object and register all types that it will can parse:
+Next step is to create parser object and register all types that it will be able to parse:
 
 ```
 SLModelParser *parser = [[SLModelParser alloc] init];
