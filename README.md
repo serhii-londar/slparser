@@ -7,7 +7,7 @@ Json to model parser for iOS and OS X implemented with Runtime.
 
 
 ### Example
-Assume you have json with next structure:
+Assume you have json with the following structure:
 
 ```
 {
@@ -23,7 +23,7 @@ Assume you have json with next structure:
 }
 ```
 
-To parse this you need to create two classes:
+To parse this, you need to create two classes:
 
 ####Person:
 ```
@@ -52,7 +52,7 @@ To parse this you need to create two classes:
 @end
 ```
 
-Next step is to create parser object and register all types that it will be able to parse:
+Next step is to create a parser object and register all the types that it will be able to parse:
 
 ```
 SLModelParser *parser = [[SLModelParser alloc] init];
@@ -60,7 +60,7 @@ SLModelParser *parser = [[SLModelParser alloc] init];
 [parser registerClass:[Avatars class]];
 ```
 
-Than you can use it in next way to parse json into model:
+Then you can use it in the following way for parsing json into model:
 
 ```
 NSDictionary *json = ... // From network, from file...
@@ -68,7 +68,7 @@ NSDictionary *json = ... // From network, from file...
 Person *person = [parser getModelFromDictionary:json1];
 ```
 
-Also you can use it to get json from model object:
+Also, you can use it in order to get json from model object:
 
 ```
 NSDictionary *modelDictionary = [parser getDictionaryFromModel:person];
