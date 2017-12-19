@@ -25,7 +25,7 @@ Assume you have json with the following structure:
 
 To parse this, you need to create two classes:
 
-####Person:
+#### Person:
 ```
 #import <SLParser/SLParser.h>
 @class Avatars;
@@ -41,7 +41,7 @@ To parse this, you need to create two classes:
 @end
 ```
 
-####Avatars:
+#### Avatars:
 ```
 #import <SLParser/SLParser.h>
 
